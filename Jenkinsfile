@@ -25,10 +25,6 @@ pipeline {
                 sh '''
                     echo "Check if index.html exists ..."
                     test -f build/index.html
-                '''
-            }
-            steps {
-                sh '''
                     echo "Run tests ..."
                     npm run test
                 '''
