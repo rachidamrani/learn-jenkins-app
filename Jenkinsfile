@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         // Stage for building
-        /* stage('Build') {
+        stage('Build') {
             agent {
                 docker {
                     image 'node:18-alpine'
@@ -21,7 +21,6 @@ pipeline {
                 '''
             }
         }
-        */
         // Stage for testing
         stage('Test'){
             agent {
@@ -32,9 +31,9 @@ pipeline {
             }
             steps {
                 sh '''
-                    # echo "Check if index.html exists ..."
-                    # test -f build/index.html
-                    # echo "Run tests ..."
+                    echo "Check if index.html exists ..."
+                    test -f build/index.html
+                    echo "Run tests ..."
                     npm run test
                 '''
             }
