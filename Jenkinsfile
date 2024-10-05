@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        // Stage for building
+        /* stage('Build') {
             agent {
                 docker {
                     image 'node:18-alpine'
@@ -20,6 +21,8 @@ pipeline {
                 '''
             }
         }
+        */
+        // Stage for testing
         stage('Test'){
             agent {
                 docker {
